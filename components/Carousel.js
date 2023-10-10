@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './carousel.module.css'
+import Image from 'next/image';
 
 const Carousel = () => {
   const settings = {
@@ -21,9 +22,9 @@ const Carousel = () => {
     <div className="container mx-auto overflow-x-hidden">
       <Slider {...settings}>
         <div>
-          <img
+        <Image width={1024} height={452.26}
             src="/image/1.jpg"
-            alt="Image 1"
+            alt="Image 2"
             className="w-full h-auto mx-auto"
           />
           <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
@@ -31,7 +32,7 @@ const Carousel = () => {
             </div>
         </div>
         <div>
-          <img
+          <Image width={1024} height={452.26}
             src="/image/2.jpg"
             alt="Image 2"
             className="w-full h-auto mx-auto"
@@ -41,9 +42,9 @@ const Carousel = () => {
             </div>
         </div>
         <div>
-          <img
+        <Image width={1024} height={452.26}
             src="/image/3.jpg"
-            alt="Image 3"
+            alt="Image 2"
             className="w-full h-auto mx-auto"
           />
           <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">

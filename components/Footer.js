@@ -4,6 +4,7 @@ import { BsPinterest } from 'react-icons/bs';
 import {AiFillTwitterCircle, AiFillFacebook, AiFillLinkedin, AiFillInstagram, AiOutlineMail} from 'react-icons/ai';
 import {FaLocationDot} from 'react-icons/fa6';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -15,7 +16,7 @@ const Footer = () => {
     <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
       <div className="lg:w-1/3 w-full px-4 flex flex-col align-middle">
       <Link className="flex justify-center md:justify-start" href="/">
-      <img className="w-40" src="/image/logo.png" alt="" />
+          <Image width={160} height={62} src="/image/logo.png" alt="" />  
       </Link>
       {/* <p className="my-5 text-sm text-gray-500 text-center">
         Air plant banjo lyft occupy retro adaptogen indego

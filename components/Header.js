@@ -4,6 +4,7 @@ import './header.module.css';
 import { BiSolidPhoneCall } from 'react-icons/bi';
 import { BsPinterest } from 'react-icons/bs';
 import {AiOutlineMail, AiFillTwitterCircle, AiFillFacebook, AiFillLinkedin, AiFillInstagram, AiFillCloseCircle, AiOutlineMenu} from 'react-icons/ai';
+import Image from 'next/image';
 
 const Header = () => {
 
@@ -47,7 +48,7 @@ const Header = () => {
 <nav className="p-5 bg-white shadow md:flex md:items-center md:justify-between">
   <div className="flex justify-between items-center ">
     <div>
-        <img className="w-40" src="/image/logo.png" alt="" />
+    <Image width={160} height={62} src="/image/logo.png" alt="" />  
     </div>
     <span className="text-3xl cursor-pointer mx-2 md:hidden block">
       {isActive?<AiFillCloseCircle onClick={()=>{
