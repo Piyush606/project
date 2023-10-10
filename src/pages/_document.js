@@ -24,7 +24,6 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <script src="/js/script.js"></script> 
         {/* Scripts*/}
         {/* <script src="/js/scroll-header.js"></script>  */}
         {/* jQuery for JavaScript plugins*/}
