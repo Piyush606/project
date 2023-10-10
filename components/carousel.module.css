@@ -1,0 +1,30 @@
+/* Custom styles for navigation arrows */
+.slick-arrow {
+    font-size: 24px;
+    line-height: 1;
+    color: #333;
+    position: absolute;
+    top: 50%;
+    /* transform: translateY(-50%); */
+    z-index: 2; /* Increase z-index to bring arrows on top of images */
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 800px;
+  }
+  
+  .slick-prev {
+    margin-left: 500px;
+  }
+  
+  .slick-next {
+    right: 10px;
+  }
+  
+  .slick-arrow:hover {
+    color: #555;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
