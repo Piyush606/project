@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Link from 'next/link';
-import './header.module.css';
 import { BiSolidPhoneCall } from 'react-icons/bi';
 import {AiOutlineMail, AiFillCloseCircle, AiOutlineMenu} from 'react-icons/ai';
 import Image from 'next/image';
@@ -49,27 +48,39 @@ const Header = () => {
   </div>
   <ul className="md:flex md:items-center z-50 md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
     <li className="mx-4 my-6 md:my-0">
-      <Link href="/" className="font-bold text-xl hover:text-blue-900 duration-500">
+      <Link href="/" onClick={() => {
+          Menu(0)
+          setIsActive(false)
+        }} className="font-bold text-xl hover:text-blue-900 duration-500">
         HOME
       </Link>
     </li>
     {/* <li className="mx-4 my-6 md:my-0">
       <a href="#" className="text-xl hover:text-blue-900 duration-500">
-        SERVICE
+      SERVICE
       </a>
     </li> */}
     <li className="mx-4 my-6 md:my-0">
-      <Link href="/about" className="font-bold text-xl hover:text-blue-900 duration-500">
+      <Link href="/about" onClick={() => {
+        Menu(0)
+        setIsActive(false)
+      }} className="font-bold text-xl hover:text-blue-900 duration-500">
         ABOUT
       </Link>
     </li>
     <li className="mx-4 my-6 md:my-0">
-      <Link href="#" className="font-bold text-xl hover:text-blue-900 duration-500">
+      <Link href="#" onClick={() => {
+        Menu(0)
+        setIsActive(false)
+      }} className="font-bold text-xl hover:text-blue-900 duration-500">
         SERVICES
       </Link>
     </li>
     <li className="flex mx-4 my-6 md:my-0">
-      <Link href="/contact" className="bg-blue-900 text-white px-6 py-2 hover:bg-blue-700 duration-500 rounded ">
+      <Link href="/contact" onClick={() => {
+        Menu(0)
+        setIsActive(false)
+      }} className="bg-blue-900 text-white px-6 py-2 hover:bg-blue-700 duration-500 rounded">
           <div className='flex align-middle'>
           <BiSolidPhoneCall className='mr-2 mt-1'/>
           <p className='font-bold'>CONTACT</p>

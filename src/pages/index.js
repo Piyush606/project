@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google'
-import Carousel from '../../components/Carousel'
+import Carousel from '../../components/Carousel/Carousel'
 import { BiSolidFactory  } from 'react-icons/bi'
 import { BsPeopleFill, BsGlobeAmericas, BsClockFill  } from 'react-icons/bs'
 

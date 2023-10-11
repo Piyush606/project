@@ -55,9 +55,9 @@ const Footer = () => {
           </li>
         </nav>
       </div> */}
-      <div className="md:w-2/3 w-full bg-slate-200 md:flex rounded-l-3xl">
+      <div className="lg:w-2/3 w-full bg-slate-200 md:flex rounded-l-3xl">
         <div className='md:w-1/2 w-full my-12 px-12'>
-          <div ref={ref2} className={`transform ease-out duration-1500 ${isVisible2 ? "translate-y-[0%] opacity-100" : "translate-y-[50%] opacity-0"}`}>
+          <div ref={ref2} className={`transform ease-out duration-1500 ${isVisible2 ? "translate-y-[0%] opacity-100" : "translate-y-[80%] opacity-0"}`}>
           <h2 className='font-bold mb-3 text-start'>
             QUICK LINKS
           </h2>

@@ -1,0 +1,46 @@
+/* Custom styles for the carousel and navigation arrows */
+.slick_prev,
+.slick_next {
+  font-size: 24px;
+  line-height: 1;
+  color: black;
+  background-color: #fff;
+  padding: 10px;
+  margin-right: 5%;
+  margin-left: 5%;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slick_prev {
+  left: 0; /* Position the 'Previous' arrow at the left end */
+  transform: translate(0, -50%); /* Re-align 'Previous' arrow for better centering */
+  z-index: 200;
+}
+
+.slick_next {
+  right: 0; /* Position the 'Next' arrow at the right end */
+  transform: translate(0, -50%); /* Re-align 'Next' arrow for better centering */
+}
+
+.slick_arrow:hover {
+  color: white;
+  background-color: transparent;
+  border: solid white 2px;
+}
+
+@media (max-width: 768px) {
+  .full_viewport_container{
+    height: 70vh;
+  }
+
+  .full_viewport_image{
+    height: 70vh;
+    width: 100%;
+    object-fit: cover;
+  }
+}
