@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import Link from 'next/link';
 import './header.module.css';
 import { BiSolidPhoneCall } from 'react-icons/bi';
-import { BsPinterest } from 'react-icons/bs';
-import {AiOutlineMail, AiFillTwitterCircle, AiFillFacebook, AiFillLinkedin, AiFillInstagram, AiFillCloseCircle, AiOutlineMenu} from 'react-icons/ai';
+import {AiOutlineMail, AiFillCloseCircle, AiOutlineMenu} from 'react-icons/ai';
 import Image from 'next/image';
+import SocialIcons from './socialIcons';
 
 const Header = () => {
 
@@ -24,24 +24,10 @@ const Header = () => {
                 <a href="tel:+917665556660" className="text-white flex font-bold mr-5 hover:text-gray-200 border-white pl-4 border-l-2"><BiSolidPhoneCall className='mt-1 mr-2'/>7665556660</a>
                 <a href="mailto:bombaysalescorp1@gmail.com" className="text-white flex font-bold mr-5 hover:text-gray-200 border-white pl-4 border-l-2"><AiOutlineMail className='mt-1 mr-2'/>bombaysalescorp1@gmail.com</a>
             </nav>
-        </div>               
-            <div className='flex mr-8'>
-                <a href="">
-                    <AiFillFacebook className='text-black text-3xl hover:text-blue-900 cursor-pointer'/>
-                </a>
-                <a href="">
-                    <AiFillTwitterCircle className='text-black ml-3 text-3xl hover:text-blue-900 cursor-pointer'/>
-                </a>
-                <a href="">
-                    <AiFillLinkedin className='text-black ml-3 text-3xl hover:text-blue-900 cursor-pointer'/>
-                </a>
-                <a href="">
-                    <AiFillInstagram className='text-black ml-3 text-3xl hover:text-blue-900 cursor-pointer'/>
-                </a>
-                <a href="">
-                    <BsPinterest className='text-black ml-3 text-3xl hover:text-blue-900 cursor-pointer'/>
-                </a>
-            </div>
+        </div>         
+        <div className="mr-8">
+        <SocialIcons />    
+        </div>  
         </div>
     </header>
 
