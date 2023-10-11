@@ -81,12 +81,12 @@ const Footer = () => {
           </h2>
           <nav className="list-none mb-10">
             <li className="mb-2">
-            <a href="tel:+917665556660" className="flex text-gray-900 hover:text-blue-800">
+            <a href="tel:+919982088592" className="flex text-gray-900 hover:text-blue-800">
             <div className='w-8'>
             <BiSolidPhoneCall className='mt-1 mr-2'/>
               </div>
               <span className=''>
-              7665556660</span></a>
+              9982088592</span></a>
             </li>
             <li className="mb-2">
             <a href="mailto:bombaysalescorp1@gmail.com" className="flex text-gray-900 hover:text-blue-800">

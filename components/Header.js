@@ -21,7 +21,7 @@ const Header = () => {
         <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center bg-slate-200"> 
         <div className="md:mr-auto bg-blue-800 w-2/3 py-5 rounded-br-full rounded-tr-full">
             <nav className="flex flex-wrap items-center text-base ml-10">
-                <a href="tel:+917665556660" className="text-white flex font-bold mr-5 hover:text-gray-200 border-white pl-4 border-l-2"><BiSolidPhoneCall className='mt-1 mr-2'/>7665556660</a>
+                <a href="tel:+919982088592" className="text-white flex font-bold mr-5 hover:text-gray-200 border-white pl-4 border-l-2"><BiSolidPhoneCall className='mt-1 mr-2'/>9982088592</a>
                 <a href="mailto:bombaysalescorp1@gmail.com" className="text-white flex font-bold mr-5 hover:text-gray-200 border-white pl-4 border-l-2"><AiOutlineMail className='mt-1 mr-2'/>bombaysalescorp1@gmail.com</a>
             </nav>
         </div>         
