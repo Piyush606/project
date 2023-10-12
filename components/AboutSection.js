@@ -1,20 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import useIsVisible from './animation/useIsVisible'
 import { useRef } from 'react'
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import Image from 'next/image'
 
 const AboutSection = () => {
-    const ref1 = useRef();
-    const isVisible1 = useIsVisible(ref1);
-  
-    const ref2 = useRef();
-    const isVisible2 = useIsVisible(ref2);
+  useEffect(() => {
+    AOS.init({duration: 2000})
+  }, [])
+
+  const ref2 = useRef();
+  const isVisible2 = useIsVisible(ref2);
   return (
     <section>
     <div className="container mx-auto flex px-5 py-8 md:flex-row flex-col items-center">
-      <div ref={ref1} className={`lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 transform ease-out duration-1500 ${isVisible1 ? "translate-x-[0%] opacity-100" : "translate-x-[-100%] opacity-0"}`}>
+      {/* <div ref={ref1} className={`lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 transform ease-out duration-1500 ${isVisible1 ? "translate-x-[0%] opacity-100" : "translate-x-[-100%] opacity-0"}`}> */}
+      <div className={`lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0`} data-aos='fade-right'>
         <Image width={720} height={600}
           className="object-cover object-center rounded"
           alt="hero"
