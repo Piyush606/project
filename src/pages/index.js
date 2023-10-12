@@ -1,11 +1,10 @@
 import { Inter } from 'next/font/google'
-import Carousel from '../../components/Carousel/Carousel'
 import { BiSolidFactory  } from 'react-icons/bi'
 import { BsPeopleFill, BsGlobeAmericas, BsClockFill  } from 'react-icons/bs'
-
 import useIsVisible from '../../components/animation/useIsVisible'
 import { useRef } from 'react'
 import AboutSection from '../../components/AboutSection'
+import SwiperCarousel from '../../components/Carousel/SwiperCarousel'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +15,7 @@ export default function Home() {
 
   return (
     <>
-    <Carousel/>
+    <SwiperCarousel/>
     <AboutSection/>
     <hr />
 

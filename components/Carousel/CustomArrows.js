@@ -1,17 +1,18 @@
 import React from 'react';
 import styles from './Carousel.module.css';
 import {AiOutlineArrowRight, AiOutlineArrowLeft} from 'react-icons/ai';
+import { useSwiper } from 'swiper/react';
 
-const CustomPrevArrow = ({ currentSlide, slideCount, ...props }) => (
-  <button {...props} className={`${styles.slick_arrow} ${styles.slick_prev}`}>
+const swiper = useSwiper();
+
+const CustomArrows = () => (
+  <><button onClick={() => swiper.slidePrev()} className={`${styles['swiper-button-prev']}`}>
     <AiOutlineArrowLeft/>
   </button>
-);
-
-const CustomNextArrow = ({ currentSlide, slideCount, ...props }) => (
-  <button {...props} className={`${styles.slick_arrow} ${styles.slick_next}`}>
+  <button onClick={() => swiper.slideNext()} className={`${styles['swiper-button-next']}`}>
     <AiOutlineArrowRight/>
-  </button>
+  </button></>
 );
 
-export { CustomPrevArrow, CustomNextArrow };
+
+export default CustomArrows;
