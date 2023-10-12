@@ -10,9 +10,16 @@ import Image from 'next/image';
 import { CustomNextArrow, CustomPrevArrow } from './CustomArrows';
 const Carousel = () => {
   
+  // const sliderRef = useRef(null);
+
   useEffect(() => {
     AOS.init({duration: 1000})
-  }, [])
+
+    // Start the autoplay when the component mounts
+    // if (sliderRef.current) {
+    //   sliderRef.current.slickPlay();
+    // }
+  }, []);
 
   const [currentSlide, setCurrentSlide] = useState(0)
 
@@ -44,7 +51,7 @@ const Carousel = () => {
 
   return (
     <div className={`container mx-auto overflow-x-hidden ${styles.full_viewport_container}`}>
-      <Slider {...settings} id='slider'>
+      <Slider {...settings}>
         <div className=''>
           <Image
 width={1024} height={452.26}
