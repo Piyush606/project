@@ -1,3 +1,30 @@
+/* Custom styles for the "Previous" arrow */
+.prev-button, .next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center the arrow */
+  background-color: white;
+  color: black;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev-button:hover, .next-button:hover{
+  background-color: transparent;
+  border: solid 2px white;
+  color: white;
+}
+
+/* Custom styles for the "Next" arrow */
+.next-button {
+  right: 30px; /* Adjust the right position */
+}
+
+.prev-button {
+  left: 30px; /* Adjust the right position */
+}
+
 /* Custom styles for Swiper navigation arrows */
 @media (max-width: 768px) {
   .full_viewport_container{
@@ -8,10 +35,5 @@
     height: 70vh;
     width: 100%;
     object-fit: cover;
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev, .swiper-button-next::after, .swiper-button-prev::after {
-    display: none !important;
   }
 }

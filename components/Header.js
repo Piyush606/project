@@ -55,11 +55,6 @@ const Header = () => {
         HOME
       </Link>
     </li>
-    {/* <li className="mx-4 my-6 md:my-0">
-      <a href="#" className="text-xl hover:text-blue-900 duration-500">
-      SERVICE
-      </a>
-    </li> */}
     <li className="mx-4 my-6 md:my-0">
       <Link href="/about" onClick={() => {
         Menu(0)
@@ -86,6 +81,9 @@ const Header = () => {
           <p className='font-bold'>CONTACT</p>
           </div>
       </Link>
+    </li>
+    <li className="flex mx-4 my-6 md:my-0 md:hidden">
+      <SocialIcons/>
     </li>
   </ul>
 </nav>

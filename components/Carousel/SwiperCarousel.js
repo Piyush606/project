@@ -1,23 +1,31 @@
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './Carousel.module.css';
 import {EffectFade, Navigation, Autoplay } from 'swiper/modules';
 import SwiperCore from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import {AiOutlineArrowRight, AiOutlineArrowLeft} from 'react-icons/ai';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/swiper-bundle.css';
-// import CustomArrows from './CustomArrows';
 
 SwiperCore.use([EffectFade, Navigation, Autoplay]);
 
 const SwiperCarousel = () => {
+    const SlideRef = useRef();
+
+    const handleNext = () => {
+      SlideRef.current.swiper.slideNext();
+    }
+
+    const handlePrev = () => {
+      SlideRef.current.swiper.slidePrev();
+    }
 
     const swiperParams = {
-        navigation: true,
         loop: true,
         slidesPerView: 1,
         spaceBetween: 30,
@@ -29,13 +37,18 @@ const SwiperCarousel = () => {
         //   el: '.swiper-pagination',
         //   clickable: true,
         // },
+        navigation: {
+          nextEl: '.next-button',
+          prevEl: '.prev-button',
+        },
         autoplay: {
           delay: 3000, // 3 seconds between slides
           disableOnInteraction: false, // Continue autoplay after user interaction
         },
       };
+
   return (<>
-    <Swiper className="mySwiper" {...swiperParams}>
+    <Swiper className="mySwiper" {...swiperParams} ref={SlideRef}>
     <SwiperSlide>
     {({ isActive }) => (
        <><Image width={1024} height={452.26}
@@ -69,6 +82,8 @@ const SwiperCarousel = () => {
         </div></>
     )}
     </SwiperSlide>
+    <div className={`${styles['prev-button']} rounded-full text-2xl hidden md:block`} onClick={handlePrev}><AiOutlineArrowLeft/></div>
+    <div className={`${styles['next-button']} rounded-full text-2xl hidden md:block`} onClick={handleNext}><AiOutlineArrowRight/></div>
   </Swiper>
   </>
   )
